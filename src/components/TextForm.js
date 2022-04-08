@@ -31,15 +31,23 @@ export const TextForm = (props) => {
           rows={8}
         />
       </Form.Group>
-      <div className="btn btn-dark" onClick={upperClick}>
+      <div className="btn btn-dark mx-2" onClick={upperClick}>
         Convert to UPPER CASE
-      </div>{" "}
-      <div className="btn btn-danger" onClick={clear}>
+      </div>
+      <div className="btn btn-danger mx-2" onClick={clear}>
         Clear
-      </div>{" "}
-      <div className="btn btn-primary" onClick={lowerClick}>
+      </div>
+      <div className="btn btn-primary mx-2" onClick={lowerClick}>
         convert to lower case
       </div>
+      <div className="container my-5">
+        <h2>Your Text Summary</h2>
+        <p>
+          {text.split(" ").length} words and {text.length} characters
+        </p>
+      </div>
+      <h3>Preview</h3>
+      <p>{text.toLowerCase()}</p>
     </Form>
   );
 };
