@@ -7,11 +7,15 @@ export const TextForm = (props) => {
     setText(newText);
   };
 
+  const clear = () => {
+    setText("");
+  };
+
   const handleOnChange = (e) => {
     setText(e.target.value);
   };
 
-  const [text, setText] = useState("Enter your text here");
+  const [text, setText] = useState("");
   return (
     <Form className="container py-3">
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -25,6 +29,9 @@ export const TextForm = (props) => {
       </Form.Group>
       <div className="btn btn-dark" onClick={upperClick}>
         Convert to UPPER CASE
+      </div>{" "}
+      <div className="btn btn-dark" onClick={clear}>
+        Clear
       </div>
     </Form>
   );
